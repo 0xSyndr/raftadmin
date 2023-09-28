@@ -1,4 +1,4 @@
-module github.com/Jille/raftadmin
+module github.com/0xSyndr/raftadmin
 
 go 1.18
 

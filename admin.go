@@ -8,17 +8,18 @@ import (
 	"sync"
 	"time"
 
-	pb "github.com/Jille/raftadmin/proto"
+	pb "github.com/0xSyndr/raftadmin/proto"
 	"github.com/hashicorp/raft"
 	"google.golang.org/grpc"
 )
 
 type admin struct {
+	pb.UnimplementedRaftAdminServer
 	r *raft.Raft
 }
 
 func Get(r *raft.Raft) pb.RaftAdminServer {
-	return &admin{r}
+	return &admin{r: r}
 }
 
 func Register(s *grpc.Server, r *raft.Raft) {

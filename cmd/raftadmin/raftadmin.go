@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	pb "github.com/Jille/raftadmin/proto"
+	pb "github.com/0xSyndr/raftadmin/proto"
 	"github.com/iancoleman/strcase"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/encoding/prototext"
